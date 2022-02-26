@@ -1,0 +1,79 @@
+.box {
+  background: rgba(56, 158, 241, 0.753);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#one {
+  background: rgb(243, 155, 155);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#two {
+  background: rgb(216, 139, 39);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#three {
+  background: rgb(225, 245, 51);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#four {
+  background: rgb(77, 240, 62);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#five {
+  background: rgb(38, 74, 192);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#six {
+  background: rgb(24, 32, 150);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#seven {
+  background: rgb(190, 40, 196);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#eight {
+  background: rgb(62, 145, 170);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#nine {
+  background: rgb(199, 178, 133);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+
+#ten {
+  background: rgb(238, 100, 158);
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
