@@ -8,6 +8,7 @@ const url =`https://newsapi.org/v2/everything?q=apple&from=${todayYearMonthData}
 const NewsDataDisplay = document.querySelector('.NewsDataDisplay');
 const main = document.querySelector('main');
 const body = document.querySelector('body');
+const h1 = document.querySelector('h1');
 //모달 관련 변수 선언
 const modal = document.querySelector('.modal');
 const button = document.querySelector('.button');
@@ -90,3 +91,5 @@ fetch(url).then(response => response.json())
           NewsDataDisplay.style.opacity = 1;
       }
 });
+
+
