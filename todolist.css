@@ -1,3 +1,24 @@
 .checkText {
   text-decoration: line-through;
 }
+
+.todolist {
+  display: flex;
+  justify-content: center;
+}
+
+.inputAndButton {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  margin: 0 auto;
+  width: 350px;
+  min-height: 200px;
+  border: solid black;
+}
+
+button {
+  float: right;
+}

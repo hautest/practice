@@ -18,15 +18,35 @@ let todosave = [];
 
 
 //입력 받아서 리스트 만드는 함수
-function makelist() {
+function makelist(text, id, done) {
+    //입력값을 로컬스로지에 저장
+    const todoobject = {
+        text: input.value ||  savelist[i].text ,
+        id: Math.floor(Math.random()*1000000)+1,
+        done : false,
+    }
+   
+    todosave.push(todoobject || savelist[i]);
+    localStorage.setItem("todosave",JSON.stringify(todosave) ); 
+    input.value = '';
     const li = document.createElement("li");
     const span = document.createElement("span");
     const delete1 = document.createElement("button");
   li.appendChild(span);
-  span.innerText = (input.value || savelist[i].text);
+  span.innerText = todoobject.text ;
   list.appendChild(li);
   li.appendChild(delete1);
   delete1.innerText = "X"
+  li.id = id;
+
+
+  span.addEventListener("click", check(id));
+  if (done) {
+    span.classList.add("checkText");
+  }
+
+
+  
 
 //삭제버튼 누르면 삭제되는 함수
 delete1.addEventListener('click', Fdelete)
@@ -40,22 +60,24 @@ delete1.addEventListener('click', Fdelete)
     console.log(todosave);
     localStorage.setItem("todosave",JSON.stringify(todosave) ); 
     }
-//입력값을 로컬스로지에 저장
-    const todoobject = {
-      text: input.value ||  savelist[i].text ,
-      id: Math.floor(Math.random()*1000000)+1,
-  }
-  li.id = todoobject.id;
-  todosave.push(todoobject || savelist[i]);
-  localStorage.setItem("todosave",JSON.stringify(todosave) ); 
-  input.value = '';
+
+
 
   //클릭하면 선 생기는 함수
-span.addEventListener("click", check);
-function check () { 
-     span.classList.toggle("checkText")
-     
-}
+
+
+  function check(id) {
+    return function (event) {
+      event.target.classList.toggle("checkText");
+      todosave = todosave.map((v) => {
+        if (v.id === id) {
+          return { ...v, done: !v.done };
+        }
+        return v;
+      });
+      localStorage.setItem("todosave", JSON.stringify(todosave));
+    };
+  }
 
 
 

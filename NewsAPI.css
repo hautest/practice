@@ -1,0 +1,68 @@
+.NewsDataDisplay {
+  border: solid black;
+  width: 600px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.articlesBox {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.titleAndContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  font-family: serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  border: solid black;
+  width: 630px;
+  height: 300px;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 26%;
+  margin-top: -305px;
+}
+
+.modalImg {
+  width: 200px;
+  height: 200px;
+}
+
+.button {
+  height: 25px;
+}
+
+.modalTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
