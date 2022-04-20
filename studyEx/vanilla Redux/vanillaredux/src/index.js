@@ -3,7 +3,6 @@ const minus = document.querySelector(".minus");
 const number = document.querySelector("span");
 
 let count = 0;
-let a = 0;
 
 const updateText = () => {
   number.innerText = count;
